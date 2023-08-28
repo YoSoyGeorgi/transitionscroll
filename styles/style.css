@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+h1 {
+    color: rgb(226, 226, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+.one {
+    background: url('../img/children-593313_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding: 50px;
+    color: #ffffff;
+}
+
+.one .divone {
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 40%;
+    height: 60%;
+    color: rgb(226, 226, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+.one .divone h2{
+    font-size: 55px;
+    display: flex;
+}
+
+.one .divone p{
+    font-size: 25px;
+    display: flex;
+}
+
+.two {
+    background: url('../img/laptop-3196481_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.two .divtwo {
+    border: 2px solid red; /* Puedes ajustar el grosor y el color del borde según tus preferencias */
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    color: #ba2525;
+    
+    
+}
+
+.servbox > div{
+    border: 2px solid purple; /* Puedes ajustar el grosor y el color del borde según tus preferencias */
+    display: flex;
+    width: 50%;
+    margin: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+.three {
+    background: url('../img/man-2562325_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.four {
+    background-color: green;
+}
+
+ul {
+    list-style: none;
+
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: left;
+}
+
+ul li ul.dropdown li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    margin-bottom: 5px;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(88, 63, 63, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    color: rgb(226, 226, 226);
+    text-shadow: 1px 1px 4px #000;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s ease-in-out;
+    }
+
+    #check:checked~.navbar {
+        display: block;
+        height: auto;
+        transition: height 0.3s ease-in-out;
+    }
+
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1rem 0;
+        text-align: center;
+        transform: translateY(50px);
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+    }
+
+    .navbar ul {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .navbar .dropdown {
+        position: static;
+    }
+
+}
+
+/* Pie de pagina */
+.pie-pag {
+    width: 100%;
+    background-color: #0a141d;
+
+}
+
+.pie-pag .grupo-1 {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+
+.pie-pag .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pie-pag .grupo-1 .box img{
+    width: 100px;
+}
+
+.pie-pag .grupo-1 .box h2{
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pag .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pag .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #ffffff;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.pie-pag .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px){
+    
+.pie-pag .grupo-1 {
+    font-size: 14px;
+    color: #ffffff;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+}
+}
+
+/* boton de whatsapp */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
