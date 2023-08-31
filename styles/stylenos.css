@@ -44,14 +44,16 @@ h1 {
 
 .mision,
 .vision {
-    flex: 1; /* Cada lado toma el mismo espacio */
-    padding: 20px;
+    height: 20%;
+    padding: 30px; /* Incluye el padding en el tamaño total */
+
     border: 1px solid #000000;
     border-radius: 15px;
-    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    box-sizing: border-box;
+
+
     background: rgba(58, 58, 59, 0.596);
-    /* 
-    background: radial-gradient(circrgb(230, 216, 222)2,1) 0%, rgba(148,233,231,0.5844712885154062) 100%; */
+    /* background: radial-gradient(circrgb(230, 216, 222)2,1) 0%, rgba(148,233,231,0.5844712885154062) 100%; */
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 4px #000000;
 }
