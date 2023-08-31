@@ -27,28 +27,75 @@ h1 {
 }
 
 .myv {
-    background: #ffffff;
+    background: url('../img/goal-7868833_1920.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
     flex-direction: row;
+    gap: 80px;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px;
-    color: #000000;
+    color: #7a7777;
 }
 
-.mision, .vision {
+
+.mision,
+.vision {
     flex: 1; /* Cada lado toma el mismo espacio */
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
+    border-radius: 15px;
     box-sizing: border-box; /* Incluye el padding en el tamaño total */
-    
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 4px #ffffff;
+    background: rgba(58, 58, 59, 0.596);
+    /* 
+    background: radial-gradient(circrgb(230, 216, 222)2,1) 0%, rgba(148,233,231,0.5844712885154062) 100%; */
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 4px #000000;
 }
+
+.myv .mision h2,
+.myv .vision h2 {
+    font-size: 55px;
+    display: flex;
+}
+.myv .vision p,
+.myv .mision p {
+    font-size: 25px;
+    display: flex;
+    display: none;
+}
+
+.myv .mision:hover p,
+.myv .vision:hover p {
+    display: block;
+    opacity: 1;
+    animation: fade-in 2s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .myv .mision p,
+    .myv .vision p{
+      font-size: 20px;
+    }
+
+    .myv .mision h2,
+    .myv .vision h2{
+      font-size: 35px;
+    }
+  }
+
 
 .one .divone {
     margin-top: 20%;
