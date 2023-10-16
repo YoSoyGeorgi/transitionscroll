@@ -29,15 +29,14 @@
     </div>
 
 
-    <a href="https://api.whatsapp.com/send?phone=442 894 0842&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n."
-        class="float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=442 894 0842&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
 
     <header class="header">
 
 
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/ense.png" alt="Logo" style="width: 125px;">
         </a>
         <input type="checkbox" id="check">
@@ -48,8 +47,8 @@
         </label>
 
         <ul class="navbar">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="nosotros.php">Nosotros</a></li>
             <li>
                 <a href="#">Divisiones</a>
                 <ul class="dropdown">
@@ -68,33 +67,35 @@
 
     <div class="container">
 
-        <section class="myv">
-            <div class="mision">
-                <h1>Misión</h1>
-                <p>Brindar servicios de capacitación,
-                    asesoría y consultoría educativa de
-                    manera comprometida y práctica,
-                    acompañando a las instituciones a
-                    alcanzar sus objetivos, buscando la
-                    innovación.</p>
-            </div>
-            <div class="vision">
-                <h1>Visión</h1>
-                <p>Posicionarnos entre las empresas de
-                    formación con mejores referencias a
-                    nivel nacional, profesionalizando a todos
-                    aquellos vinculados al área de
-                    enseñanza y de capacitación</p>
-            </div>
+        <section class="formulario">
+
+            <form action="formulario.php" method="post" style="display: flex; justify-content: center; align-items: center;">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" name="correo" id="correo" required>
+                </div>
+                <div>
+                    <label for="telefono">Número telefónico</label>
+                    <input type="tel" name="telefono" id="telefono" required>
+                </div>
+                <div>
+                    <label for="horario">Horario de disponibilidad</label>
+                    <input type="text" name="horario" id="horario" required>
+                </div>
+                <div>
+                    <label for="empresa">Nombre de la empresa</label>
+                    <input type="text" name="empresa" id="empresa" required>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
         </section>
 
-        <section class="historia">
-            <div class="hist">
-                <h2>historia</h2>
-            </div>
-        </section>
 
-        
 
         <footer class="pie-pag">
 

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pruba</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="styles/stylenos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -37,7 +37,7 @@
     <header class="header">
 
 
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/ense.png" alt="Logo" style="width: 125px;">
         </a>
         <input type="checkbox" id="check">
@@ -48,8 +48,8 @@
         </label>
 
         <ul class="navbar">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="nosotros.php">Nosotros</a></li>
             <li>
                 <a href="#">Divisiones</a>
                 <ul class="dropdown">
@@ -68,40 +68,33 @@
 
     <div class="container">
 
-        <section class="one">
-            <div class="divone">
-                <h2>Orientación</h2>
-                <p>Tu camino educativo con la orientación que necesitas para destacar.</p>
+        <section class="myv">
+            <div class="mision">
+                <h1>Misión</h1>
+                <p>Brindar servicios de capacitación,
+                    asesoría y consultoría educativa de
+                    manera comprometida y práctica,
+                    acompañando a las instituciones a
+                    alcanzar sus objetivos, buscando la
+                    innovación.</p>
+            </div>
+            <div class="vision">
+                <h1>Visión</h1>
+                <p>Posicionarnos entre las empresas de
+                    formación con mejores referencias a
+                    nivel nacional, profesionalizando a todos
+                    aquellos vinculados al área de
+                    enseñanza y de capacitación</p>
             </div>
         </section>
 
-        <section class="two">
-            <div class="divtwo">
-                <h2>Profesionalismo</h2>
-                <p>Formación profesional a tu alcance para potenciar tu carrera educativa.</p>
+        <section class="historia">
+            <div class="hist">
+                <h2>historia</h2>
             </div>
         </section>
 
-        <section class="three">
-            <div class="divthree">
-                <h2>Innovación</h2>
-                <p>Descubre la vanguardia educativa a través de nuestra plataforma de innovación.</p>
-            </div>
-        </section>
-
-        <section class="four">
-            <div class="divfour">
-                <h2>Especialización</h2>
-                <p>Cursos de especialización diseñados para enriquecer tus habilidades educativas.</p>
-            </div>
-        </section>
-
-        <section class="five">
-            <div class="divfive">
-                <h2>Confiabilidad</h2>
-                <p>Contamos con una plataforma diseñada para una formación sólida y de calidad.</p>
-            </div>
-        </section>
+        
 
         <footer class="pie-pag">
 
