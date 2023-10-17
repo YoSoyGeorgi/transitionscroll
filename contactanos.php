@@ -1,3 +1,75 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
+
+if (isset($_POST['submit'])) {
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $numero = $_POST['numero'];
+    $empresa = $_POST['empresa'];
+    $mensaje = $_POST['mensaje'];
+
+    $errors = array();
+    if (empty($nombre)) {
+        $errors[] = 'El campo nombre es obligatorio';
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'El correo electronico no es valido';
+    }
+    if (empty($numero)) {
+        $errors[] = 'El campo numero es obligatorio';
+    }
+    if (empty($empresa)) {
+        $errors[] = 'El campo empresa es obligatorio';
+    }
+    if (empty($mensaje)) {
+        $errors[] = 'El campo mensaje es obligatorio';
+    }
+
+    if (count($errors) == 0) {
+
+        $msj = "De: $nombre <a href='mailto:$email'>$email</a><br>";
+        $msj.= "Asunto: informacion <br><br>";
+        $msj.= "Cuerpo del mensaje";
+        $msj.= '<p>'.$mensaje.'<p>';
+        
+        $mail = new PHPMailer(true);
+
+        try{
+            $mail -> SMTPDebug = SMTP::DEBUG_OFF;
+            $mail -> isSMTP();
+            $mail -> Host = 'smtp.gmail.com';
+            $mail -> Username = 'georgijhon117@gmail.com';
+            $mail -> SMTPAuth = true;
+            $mail -> Password ='okdv sdxw oncz eirj' ;
+            $mail -> SMTPSecure =PHPMailer::ENCRYPTION_SMTPS;
+            $mail -> Port = 465;
+            
+            $mail -> setFrom('georgijhon117@gmail.com'.'Jorge');
+            $mail -> addAddress($email,'');
+
+            $mail -> isHTML(true);
+            $mail -> Subject = 'Informacion';
+            $mail -> Body = utf8_decode($msj);
+
+            $mail -> send();
+
+            $respuesta = 'Correo enviado';
+        } catch(Exception $e){
+            $respuesta = 'Mensaje ' . $mail->ErrorInfo;
+        }
+
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +77,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
-    <link rel="stylesheet" href="styles/stylenos.css">
+    <!-- 
+        
+    <link rel="stylesheet" href="styles/style.css">
+    -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -69,29 +146,74 @@
 
         <section class="formulario">
 
-            <form action="formulario.php" method="post" style="display: flex; justify-content: center; align-items: center;">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" required>
+            <div class="containet py-3">
+                <div class="mb-4 border-bottom">
+                    <h1 class="fs-4">Contacto</h1>
                 </div>
-                <div>
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" name="correo" id="correo" required>
+
+                <?php
+                if (isset($errors)) {
+                    if (count($errors) > 0) {
+                ?>
+
+                        <div class="col-lg-6 col-md-12">
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <?php 
+                                    foreach($errors as $error) {
+                                        echo $error . '<br>';
+                                    }
+                                ?>
+                            </div>
+                        </div>
+
+                <?php
+
+                    }
+                }
+                ?>
+
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <form class="form" method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" autofocus required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electronico</label>
+                                <input type="text" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="numero" class="form-label">Telefono</label>
+                                <input type="tel" class="form-control" id="numero" name="numero" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="empresa" class="form-label">Empresa</label>
+                                <input type="text" class="form-control" id="empresa" name="empresa">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensae" name="mensaje" rows="3"></textarea>
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+
+                    </div>
                 </div>
-                <div>
-                    <label for="telefono">Número telefónico</label>
-                    <input type="tel" name="telefono" id="telefono" required>
-                </div>
-                <div>
-                    <label for="horario">Horario de disponibilidad</label>
-                    <input type="text" name="horario" id="horario" required>
-                </div>
-                <div>
-                    <label for="empresa">Nombre de la empresa</label>
-                    <input type="text" name="empresa" id="empresa" required>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
+
+                <?php 
+                    if(isset($respuesta)) { ?>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <php echp $respuesta ?>
+                        </div>
+                    </div>
+            <?php } ?>
+            </div>
 
         </section>
 
