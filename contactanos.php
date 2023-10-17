@@ -35,36 +35,35 @@ if (isset($_POST['submit'])) {
     if (count($errors) == 0) {
 
         $msj = "De: $nombre <a href='mailto:$email'>$email</a><br>";
-        $msj.= "Asunto: informacion <br><br>";
-        $msj.= "Cuerpo del mensaje";
-        $msj.= '<p>'.$mensaje.'<p>';
-        
+        $msj .= "Asunto: informacion <br><br>";
+        $msj .= "Cuerpo del mensaje";
+        $msj .= '<p>' . $mensaje . '<p>';
+
         $mail = new PHPMailer(true);
 
-        try{
-            $mail -> SMTPDebug = SMTP::DEBUG_OFF;
-            $mail -> isSMTP();
-            $mail -> Host = 'smtp.gmail.com';
-            $mail -> Username = 'georgijhon117@gmail.com';
-            $mail -> SMTPAuth = true;
-            $mail -> Password ='okdv sdxw oncz eirj' ;
-            $mail -> SMTPSecure =PHPMailer::ENCRYPTION_SMTPS;
-            $mail -> Port = 465;
-            
-            $mail -> setFrom('georgijhon117@gmail.com'.'Jorge');
-            $mail -> addAddress($email,'');
+        try {
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Username = 'georgijhon117@gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Password = 'okdv sdxw oncz eirj';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port = 465;
 
-            $mail -> isHTML(true);
-            $mail -> Subject = 'Informacion';
-            $mail -> Body = utf8_decode($msj);
+            $mail->setFrom('georgijhon117@gmail.com' . 'Jorge');
+            $mail->addAddress($email, '');
 
-            $mail -> send();
+            $mail->isHTML(true);
+            $mail->Subject = 'Informacion';
+            $mail->Body = utf8_decode($msj);
+
+            $mail->send();
 
             $respuesta = 'Correo enviado';
-        } catch(Exception $e){
+        } catch (Exception $e) {
             $respuesta = 'Mensaje ' . $mail->ErrorInfo;
         }
-
     }
 }
 ?>
@@ -77,10 +76,9 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
-    <!-- 
-        
-    <link rel="stylesheet" href="styles/style.css">
-    -->
+
+    <link rel="stylesheet" href="styles/stylecont.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -146,7 +144,7 @@ if (isset($_POST['submit'])) {
 
         <section class="formulario">
 
-            <div class="containet py-3">
+            <div class="container py-3">
                 <div class="mb-4 border-bottom">
                     <h1 class="fs-4">Contacto</h1>
                 </div>
@@ -158,10 +156,10 @@ if (isset($_POST['submit'])) {
 
                         <div class="col-lg-6 col-md-12">
                             <div class="alert alert-danger alert-dismissible" role="alert">
-                                <?php 
-                                    foreach($errors as $error) {
-                                        echo $error . '<br>';
-                                    }
+                                <?php
+                                foreach ($errors as $error) {
+                                    echo $error . '<br>';
+                                }
                                 ?>
                             </div>
                         </div>
@@ -197,7 +195,7 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="mb-3">
                                 <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensae" name="mensaje" rows="3"></textarea>
+                                <textarea class="form-control" id="mensae" name="mensaje" rows="1"></textarea>
                             </div>
                             <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
                         </form>
@@ -205,51 +203,53 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
 
-                <?php 
-                    if(isset($respuesta)) { ?>
+                <?php
+                if (isset($respuesta)) { ?>
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <php echp $respuesta ?>
                         </div>
                     </div>
-            <?php } ?>
+                <?php } ?>
             </div>
 
         </section>
 
 
 
-        <footer class="pie-pag">
-
-            <div class="grupo-1">
-                <div class="box">
-                    <figure>
-                        <a href="#">
-                            <img src="img/ense.png" alt="Logo">
-                        </a>
-                    </figure>
-                </div>
-                <div class="box">
-                    <h2>Contactanos</h2>
-                    <p>informes@ensenandoaensenar.com</p>
-                    <p>442 894 0842</p>
-                </div>
-                <div class="box">
-                    <h2>Siguenos</h2>
-                    <div class="red-social">
-                        <a href="#" class='bx bxl-facebook-circle bx-tada'></a>
-                        <a href="#" class='bx bxl-instagram bx-tada'></a>
-                        <a href="#" class='bx bxl-youtube bx-tada'></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grupo-2">
-                <small>&copy; 2023 <b>Enseñando a Enseñar</b> - Derechos Reservados</small>
-            </div>
-
-        </footer>
     </div>
+
+    </div>
+    <footer class="pie-pag">
+
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="img/ense.png" alt="Logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Contactanos</h2>
+                <p>informes@ensenandoaensenar.com</p>
+                <p>442 894 0842</p>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="red-social">
+                    <a href="#" class='bx bxl-facebook-circle bx-tada'></a>
+                    <a href="#" class='bx bxl-instagram bx-tada'></a>
+                    <a href="#" class='bx bxl-youtube bx-tada'></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Enseñando a Enseñar</b> - Derechos Reservados</small>
+        </div>
+
+    </footer>
 
 </body>
 
