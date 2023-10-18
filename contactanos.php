@@ -9,20 +9,34 @@ require 'PHPMailer/SMTP.php';
 require 'PHPMailer/Exception.php';
 
 if (isset($_POST['submit'])) {
+
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $numero = $_POST['numero'];
     $empresa = $_POST['empresa'];
     $mensaje = $_POST['mensaje'];
 
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $captcha = $_POST['g-recaptcha-response'];
+    $secretkey = "6LfZA60oAAAAANakLqNUIAUyViNnHmaXDuuo4suD";
+
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+    $atributos = json_decode($response, TRUE);
+
     $errors = array();
+
+    if(!$atributos['success']){
+        $errors[] = 'Verificar Captcha';
+    }
+
     if (empty($nombre)) {
         $errors[] = 'El campo nombre es obligatorio';
     }
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'El correo electronico no es valido';
     }
-    if (empty($numero)) {
+    if (!is_numeric($numero)) {
         $errors[] = 'El campo numero es obligatorio';
     }
     if (empty($empresa)) {
@@ -83,6 +97,7 @@ if (isset($_POST['submit'])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -197,6 +212,11 @@ if (isset($_POST['submit'])) {
                                 <label for="mensaje" class="form-label">Mensaje</label>
                                 <textarea class="form-control" id="mensae" name="mensaje" rows="1"></textarea>
                             </div>
+
+                            <div class="mb-3">
+                                <div class="g-recaptcha" data-sitekey="6LfZA60oAAAAAJ3CP7WhqwB9jfg1EkSHCJUGzNdA">
+                            </div>
+                            <br>
                             <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
                         </form>
 
