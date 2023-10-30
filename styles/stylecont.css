@@ -7,6 +7,14 @@
     font-family: "Roboto", sans-serif;
 }
 
+body
+{
+    background: url('../img/books-5937823_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 100%;
+}
 
 h1 {
     color: rgb(226, 226, 226);
@@ -183,6 +191,7 @@ ul li:hover ul.dropdown {
 
 .container {
     margin-top: 50px;
+    
 }
 
 
@@ -194,6 +203,10 @@ ul li:hover ul.dropdown {
     margin-right: 350px;
     display: flex;
 }
+
+.formulario input {
+    width: 300px;
+  }
 
 @media (max-width: 768px) {
     .formulario {

@@ -58,7 +58,7 @@
                     <li><a href="#">Empresas</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="contactanos.php">Contacto</a></li>
             <li><a href="#">Aula Virtual</a></li>
         </ul>
 
