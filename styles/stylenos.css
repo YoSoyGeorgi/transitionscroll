@@ -13,147 +13,54 @@
     height: 100vh;
 }
 
+
 section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
+    color: rgb(226, 226, 226);
+    text-shadow: 1px 1px 4px #000;
+
 }
+
+
+.mision {
+    height: 60%;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 40%;
+
+}
+
+.vision {
+    height: 60%;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 40%;
+}
+
+
+
+
 
 h1 {
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 4px #ffffff;
-}
-
-.myv {
-    /*
-    background: url('../img/goal-7868833_1920.jpg');
-     */ 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: flex;
-    flex-direction: row;
-    gap: 80px;
     justify-content: center;
+    display: flex;
     align-items: center;
-    text-align: center;
-    padding: 50px;
-    /* 
-    color: #7a7777; */
-}
-
-
-.mision,
-.vision {
-    height: 20%;
-    padding: 30px; /* Incluye el padding en el tamaño total */
-
-    border-radius: 15px;
-    box-sizing: border-box;
-
-/*  
-    background: rgba(58, 58, 59, 0.596); */
-    /* background: radial-gradient(circrgb(230, 216, 222)2,1) 0%, rgba(148,233,231,0.5844712885154062) 100%; */
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 4px #ffffff;
-}
-
-.myv .mision h2,
-.myv .vision h2 {
-    font-size: 55px;
-    display: flex;
-}
-.myv .vision p,
-.myv .mision p {
-    font-size: 25px;
-    display: flex;
-    display: none;
-}
-
-.myv .mision:hover p,
-.myv .vision:hover p {
-    display: block;
-    opacity: 1;
-    animation: fade-in 2s ease-in-out;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .myv .mision p,
-    .myv .vision p{
-      font-size: 20px;
-    }
-
-    .myv .mision h2,
-    .myv .vision h2{
-      font-size: 35px;
-    }
-  }
-
-
-.one .divone {
-    margin-top: 20%;
-    margin-left: 10%;
-    width: 40%;
-    height: 60%;
     color: rgb(226, 226, 226);
     text-shadow: 1px 1px 4px #000;
-}
-
-.one .divone h2 {
     font-size: 55px;
-    display: flex;
 }
 
-.one .divone p {
+p {
     font-size: 25px;
     display: flex;
 }
 
-.two {
-    background: url('../img/laptop-3196481_1920.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
 
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    padding: 50px;
-    color: #ffffff;
-}
-
-.two .divtwo {
-    margin-top: 20%;
-    margin-left: 10%;
-    width: 40%;
-    height: 60%;
-    color: rgb(226, 226, 226);
-    text-shadow: 1px 1px 4px #000;
-
-
-}
-
-.two .divtwo h2 {
-    font-size: 55px;
-    display: flex;
-}
-
-.two .divtwo p {
-    font-size: 25px;
-    display: flex;
-}
 
 
 ul {
@@ -397,6 +304,10 @@ ul li:hover ul.dropdown {
         padding: 35px 0;
     }
 }
+
+
+
+
 
 /* boton de whatsapp */
 .float {

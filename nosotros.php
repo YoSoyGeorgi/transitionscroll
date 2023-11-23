@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/stylenos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -29,8 +30,7 @@
     </div>
 
 
-    <a href="https://api.whatsapp.com/send?phone=442 894 0842&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n."
-        class="float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=442 894 0842&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
 
@@ -69,7 +69,7 @@
     <div class="container">
 
         <section class="myv">
-            <div class="mision">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="mision">
                 <h1>Misión</h1>
                 <p>Brindar servicios de capacitación,
                     asesoría y consultoría educativa de
@@ -78,7 +78,8 @@
                     alcanzar sus objetivos, buscando la
                     innovación.</p>
             </div>
-            <div class="vision">
+
+            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="vision">
                 <h1>Visión</h1>
                 <p>Posicionarnos entre las empresas de
                     formación con mejores referencias a
@@ -86,7 +87,10 @@
                     aquellos vinculados al área de
                     enseñanza y de capacitación</p>
             </div>
+
         </section>
+
+    
 
         <section class="historia">
             <div class="hist">
@@ -94,7 +98,7 @@
             </div>
         </section>
 
-        
+
 
         <footer class="pie-pag">
 
@@ -129,5 +133,10 @@
     </div>
 
 </body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>
