@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="stylesheet" href="styles/stylenos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -65,23 +67,38 @@
     </header>
 
 
-    <div class="container">
+    <div class="card-deck">
         <div class="card">
-            <h2>Tarjeta 1</h2>
-            <p>Este es el contenido de la tarjeta 1.</p>
-        </div>
+            <div class="card-img-top" alt="Card image cap">
+                <i class='bx bxs-edit-alt'></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Misión</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
 
-        <div class="card">
-            <h2>Tarjeta 2</h2>
-            <p>Este es el contenido de la tarjeta 2.</p>
         </div>
-
         <div class="card">
-            <h2>Tarjeta 3</h2>
-            <p>Este es el contenido de la tarjeta 3.</p>
+            <div class="card-img-top" alt="Card image cap">
+                <i class='bx bx-glasses'></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Visión</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="card-img-top" alt="Card image cap">
+                <i class='bx bx-book-open'></i>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Historia</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+
         </div>
     </div>
-
 
     <footer class="pie-pag">
 
