@@ -66,6 +66,11 @@
 
     </header>
 
+    <div class="titulo">
+        <h1>
+            CONÓCENOS
+        </h1>
+    </div>
 
     <div class="card-deck">
         <div class="card">
@@ -74,7 +79,14 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">Misión</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">
+                    Brindar servicios de capacitación,
+                    asesoría y consultoría educativa de
+                    manera comprometida y práctica,
+                    acompañando a las instituciones a
+                    alcanzar sus objetivos, buscando la
+                    innovación.
+                </p>
             </div>
 
         </div>
@@ -84,7 +96,13 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">Visión</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text">
+                    Posicionarnos entre las empresas de
+                    formación con mejores referencias a
+                    nivel nacional, profesionalizando a todos
+                    aquellos vinculados al área de
+                    enseñanza y de capacitación.
+                </p>
             </div>
 
         </div>
