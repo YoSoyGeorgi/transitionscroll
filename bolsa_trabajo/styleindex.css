@@ -1,0 +1,30 @@
+.container {
+    margin-top: 50px;
+  }
+  
+  .list-group {
+    margin-bottom: 50px;
+  }
+  
+  .list-group-item {
+    border-radius: 0;
+  }
+  
+  .list-group-item a {
+    color: #000;
+  }
+  
+  .list-group-item h3 {
+    font-size: 1.2em;
+  }
+  
+  .list-group-item p {
+    font-size: 0.9em;
+  }
+  
+  .vacante-detalle {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
