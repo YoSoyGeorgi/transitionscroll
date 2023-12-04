@@ -79,7 +79,7 @@
 
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="img/01.jpg" alt="">
+                    <img src="img/notebook-2637757_1280.jpg" alt="">
                     <div class="card-description">
                         <div class="card-title">
                             <h4>Curso demo</h4>
@@ -96,7 +96,7 @@
 
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/02.jpg" alt="">
+                    <img src="img/notebook-2637757_1280.jpg" alt="">
                     <div class="card-description">
                         <div class="card-title">
                             <h4>Curso demo</h4>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/03.jpg" alt="">
+                    <img src="img/notebook-2637757_1280.jpg" alt="">
                     <div class="card-description">
                     <div class="card-title">
                             <h4>Curso demo</h4>
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/04.jpg" alt="">
+                    <img src="img/notebook-2637757_1280.jpg" alt="">
                     <div class="card-description">
                     <div class="card-title">
                             <h4>Curso demo</h4>
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/05.jpg" alt="">
+                    <img src="img/notebook-2637757_1280.jpg" alt="">
                     <div class="card-description">
                     <div class="card-title">
                             <h4>Curso demo</h4>
@@ -161,7 +161,7 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="img/06.jpg" alt="">
+                    <img src="img/notebook-2637757_1280.jpg" alt="">
                     <div class="card-description">
                     <div class="card-title">
                             <h4>Curso demo</h4>
