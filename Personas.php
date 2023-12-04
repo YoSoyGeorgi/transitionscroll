@@ -67,6 +67,12 @@
 
 
     <div class="container">
+
+        <div class="encabezado">
+            <h1>Particulares</h1>
+            <p>Ofrecemos una variedad de cursos para personas particulares que te ayudarán a fortalecer tus habilidades como empleador</p>
+
+        </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-container mySwiper">
@@ -76,15 +82,15 @@
                     <img src="img/01.jpg" alt="">
                     <div class="card-description">
                         <div class="card-title">
-                            <h4>Descripción</h4>
+                            <h4>Curso demo</h4>
                         </div>
                         <div class="card-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
+                            <p>0 horas de contenido</p>
+                            <p>0 modulos</p>
+                            <p>Certificado final</p>
                         </div>
                         <div class="card-link">
-                            <a href="#">Ver más</a>
+                            <a href="https://mpago.la/2fcQMNb">Comprar</a>
                         </div>
                     </div>
 
@@ -93,63 +99,63 @@
                     <img src="img/02.jpg" alt="">
                     <div class="card-description">
                         <div class="card-title">
-                            <h4>Descripción</h4>
+                            <h4>Curso demo</h4>
                         </div>
                         <div class="card-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
+                            <p>0 horas de contenido</p>
+                            <p>0 modulos</p>
+                            <p>Certificado final</p>
                         </div>
                         <div class="card-link">
-                            <a href="#">Ver más</a>
+                            <a href="https://mpago.la/2fcQMNb">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/03.jpg" alt="">
                     <div class="card-description">
-                        <div class="card-title">
-                            <h4>Descripción</h4>
+                    <div class="card-title">
+                            <h4>Curso demo</h4>
                         </div>
                         <div class="card-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
+                            <p>0 horas de contenido</p>
+                            <p>0 modulos</p>
+                            <p>Certificado final</p>
                         </div>
                         <div class="card-link">
-                            <a href="#">Ver más</a>
+                            <a href="https://mpago.la/2fcQMNb">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/04.jpg" alt="">
                     <div class="card-description">
-                        <div class="card-title">
-                            <h4>Descripción</h4>
+                    <div class="card-title">
+                            <h4>Curso demo</h4>
                         </div>
                         <div class="card-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
+                            <p>0 horas de contenido</p>
+                            <p>0 modulos</p>
+                            <p>Certificado final</p>
                         </div>
                         <div class="card-link">
-                            <a href="#">Ver más</a>
+                            <a href="https://mpago.la/2fcQMNb">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/05.jpg" alt="">
                     <div class="card-description">
-                        <div class="card-title">
-                            <h4>Descripción</h4>
+                    <div class="card-title">
+                            <h4>Curso demo</h4>
                         </div>
                         <div class="card-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
+                            <p>0 horas de contenido</p>
+                            <p>0 modulos</p>
+                            <p>Certificado final</p>
                         </div>
                         <div class="card-link">
-                            <a href="#">Ver más</a>
+                            <a href="https://mpago.la/2fcQMNb">Comprar</a>
                         </div>
                     </div>
                 </div>
@@ -157,16 +163,16 @@
                 <div class="swiper-slide">
                     <img src="img/06.jpg" alt="">
                     <div class="card-description">
-                        <div class="card-title">
-                            <h4>Descripción</h4>
+                    <div class="card-title">
+                            <h4>Curso demo</h4>
                         </div>
                         <div class="card-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
+                            <p>0 horas de contenido</p>
+                            <p>0 modulos</p>
+                            <p>Certificado final</p>
                         </div>
                         <div class="card-link">
-                            <a href="#">Ver más</a>
+                            <a href="https://mpago.la/2fcQMNb">Comprar</a>
                         </div>
                     </div>
                 </div>
@@ -178,7 +184,40 @@
 
     </div>
 
-    </div>
+    <!-- 
+        <footer class="pie-pag">
+
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="img/ense.png" alt="Logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Contactanos</h2>
+                <p>informes@ensenandoaensenar.com</p>
+                <p>442 894 0842</p>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="red-social">
+                    <a href="#" class='bx bxl-facebook-circle bx-tada'></a>
+                    <a href="#" class='bx bxl-instagram bx-tada'></a>
+                    <a href="#" class='bx bxl-youtube bx-tada'></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Enseñando a Enseñar</b> - Derechos Reservados</small>
+        </div>
+
+    </footer>
+
+ 
+    !-->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
 
