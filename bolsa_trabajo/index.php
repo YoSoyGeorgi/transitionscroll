@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #2d2d2d;
+            background-color: #ddd;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -29,12 +29,12 @@
             margin-bottom: 10px;
             padding: 10px;
             border: 1px solid #ddd;
-            background-color: #fff;
+            background-color: #ddd;
             transition: background-color 0.3s ease;
         }
 
         .vacante:hover {
-            background-color: #f0f0f0;
+            background-color: #ddd;
         }
 
         #columna-izquierda {
@@ -47,6 +47,13 @@
             float: left;
             padding-left: 20px;
         }
+
+        /* Estilos adicionales para fijar el botón de cierre de sesión en la esquina superior derecha */
+        .fixed-top-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 
@@ -56,16 +63,27 @@
         <h1>Ofertas Laborales</h1>
     </header>
 
+    <!-- Verificar si el usuario ha iniciado sesión -->
+    <?php
+    session_start();
+    if (!isset($_SESSION['email'])) {
+        header('Location: login.php');
+        exit();
+    }
+    ?>
+
+    <!-- Botón de cierre de sesión -->
+    <div class="fixed-top-container">
+        <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
+    </div>
+
     <div class="container">
+        <!-- Columna Izquierda -->
         <div id="columna-izquierda">
             <?php
-            // Incluye el archivo con la lógica de manejo de ofertas
             include 'ofertas.php';
-
-            // Obtiene la lista de ofertas laborales
             $listaOfertasLaborales = obtenerListaOfertasLaborales();
 
-            // Muestra la lista de ofertas en la columna izquierda
             foreach ($listaOfertasLaborales as $oferta) {
                 echo '<div class="vacante" onclick="mostrarInformacionOferta(' . $oferta['id'] . ')">';
                 echo '<strong>' . $oferta['titulo_vacante'] . '</strong>';
@@ -74,28 +92,21 @@
             ?>
         </div>
 
+        <!-- Columna Derecha -->
         <div id="columna-derecha">
-            <?php
-            // Muestra la información detallada de la oferta seleccionada
-            if (isset($_GET['id_oferta'])) {
-                $idOfertaSeleccionada = $_GET['id_oferta'];
-                $informacionOferta = obtenerInformacionOfertaLaboral($idOfertaSeleccionada);
-
-                echo '<h2>' . $informacionOferta['titulo_vacante'] . '</h2>';
-                echo '<p>Descripción: ' . $informacionOferta['descripcion'] . '</p>';
-                // ... (más campos de información)
-            }
-            ?>
+            <!-- Contenedor para mostrar la información de la oferta y el formulario de postulación -->
+            <div id="info-oferta-container"></div>
         </div>
+    </div>
     </div>
 
     <script>
         function mostrarInformacionOferta(idOferta) {
-            // Utiliza AJAX para cargar la información detallada en la columna derecha
+            // Utiliza AJAX para cargar la información detallada y el formulario
             var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
+            xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    document.getElementById('columna-derecha').innerHTML = xhr.responseText;
+                    document.getElementById('info-oferta-container').innerHTML = xhr.responseText;
                 }
             };
             xhr.open('GET', 'detalle_oferta.php?id_oferta=' + idOferta, true);

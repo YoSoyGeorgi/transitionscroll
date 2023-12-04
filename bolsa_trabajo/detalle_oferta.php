@@ -17,10 +17,10 @@ if (isset($_GET['id_oferta'])) {
     echo '<title>Detalle de Oferta Laboral</title>';
     echo '<style>';
     echo 'body { font-family: "Arial", sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }';
-    echo 'header { background-color: #2d2d2d; color: #fff; padding: 10px; text-align: center; }';
-    echo 'section { max-width: 800px; margin: 20px auto; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }';
-    echo 'h2 { color: #2d2d2d; }';
-    echo 'p { color: #545454; }';
+    echo 'header { background-color: #ddd; color: #000; padding: 10px; text-align: center; }';
+    echo 'section { max-width: 800px; margin: 20px auto; padding: 20px; background-color: #ddd; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }';
+    echo 'h2 { color: #000; }';
+    echo 'p { color: #000; }';
     echo '</style>';
     echo '</head>';
     echo '<body>';
@@ -37,7 +37,20 @@ if (isset($_GET['id_oferta'])) {
     echo '<p>Correo de Contacto: ' . $informacionOferta['correo_contacto'] . '</p>';
     echo '<p>Sueldo: $' . $informacionOferta['sueldo'] . '</p>';
     echo '<p>Nombre de la Empresa: ' . $informacionOferta['nombre_empresa'] . '</p>';
+
+    // Formulario de postulación
+    echo '<h3>Postúlate</h3>';
+    echo '<form action="procesar_postulacion.php" method="post" enctype="multipart/form-data">';
+    echo '<label for="archivo">Adjuntar PDF:</label>';
+    echo '<input type="file" name="archivo" id="archivo" accept=".pdf" required>';
+    echo '<input type="hidden" name="id_oferta" value="' . $idOfertaSeleccionada . '">';
+    echo '<button type="submit" class="btn btn-primary">Enviar Postulación</button>';
+    echo '</form>';
+
     echo '</section>';
+
+
+
 
     // Cierra la estructura básica de la página
     echo '</body>';
