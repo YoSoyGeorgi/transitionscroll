@@ -53,9 +53,9 @@
             <li>
                 <a href="#">Divisiones</a>
                 <ul class="dropdown">
-                    <li><a href="#">Personas</a></li>
-                    <li><a href="#">Educación</a></li>
-                    <li><a href="#">Empresas</a></li>
+                    <li><a href="Personas.php">Personas</a></li>
+                    <li><a href="Personas.php">Educación</a></li>
+                    <li><a href="Personas.php">Empresas</a></li>
                 </ul>
             </li>
             <li><a href="contactanos.php">Contacto</a></li>

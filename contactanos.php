@@ -142,12 +142,12 @@ if (isset($_POST['submit'])) {
             <li>
                 <a href="#">Divisiones</a>
                 <ul class="dropdown">
-                    <li><a href="#">Personas</a></li>
-                    <li><a href="#">Educación</a></li>
-                    <li><a href="#">Empresas</a></li>
+                    <li><a href="Personas.php">Personas</a></li>
+                    <li><a href="Personas.php">Educación</a></li>
+                    <li><a href="Personas.php">Empresas</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="contactanos.php">Contacto</a></li>
             <li><a href="#">Aula Virtual</a></li>
         </ul>
 

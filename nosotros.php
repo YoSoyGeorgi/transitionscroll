@@ -54,9 +54,9 @@
             <li>
                 <a href="#">Divisiones</a>
                 <ul class="dropdown">
-                    <li><a href="#">Personas</a></li>
-                    <li><a href="#">Educación</a></li>
-                    <li><a href="#">Empresas</a></li>
+                    <li><a href="Personas.php">Personas</a></li>
+                    <li><a href="Personas.php">Educación</a></li>
+                    <li><a href="Personas.php">Empresas</a></li>
                 </ul>
             </li>
             <li><a href="contactanos.php">Contacto</a></li>
@@ -70,6 +70,8 @@
         <h1>
             CONÓCENOS
         </h1>
+
+        <h3>Somos una empresa especialista en la capacitación de educadores y capacitadores externos.</h3>
     </div>
 
     <div class="card-deck">
@@ -112,7 +114,12 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">Historia</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text">
+                    Tenemos amplia experiencia en procesos
+                    educativos para acompañar y asesorar a las
+                    instituciones con propuestas hechas a la
+                    medida de sus necesidades.
+                </p>
             </div>
 
         </div>

@@ -366,6 +366,22 @@ ul li:hover ul.dropdown {
         position: static;
     }
 
+    .one .divone h2,
+    .two .divtwo h2,
+    .three .divthree h2,
+    .four .divfour h2,
+    .five .divfive h2 {
+        font-size: 40px; /* Tamaño de fuente más pequeño para pantallas móviles */
+    }
+
+    .one .divone p,
+    .two .divtwo p,
+    .three .divthree p,
+    .four .divfour p,
+    .five .divfive p {
+        font-size: 18px; /* Tamaño de fuente más pequeño para pantallas móviles */
+    }
+
 }
 
 /* Pie de pagina */
