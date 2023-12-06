@@ -26,7 +26,7 @@
 
 
         <div class="row">
-            <div class="col-md-4 mb-4">
+            <div class="col-md-3 mb-4">
                 <!-- Formulario de Registro -->
                 <form action="procesar_registro.php" method="post">
                     <div class="mb-3">

@@ -25,7 +25,7 @@
 
 
         <div class="row">
-            <div class="col-md-4 mb-4">
+            <div class="col-md-3 mb-4">
                 <h2>Agregar vacante</h2>
                 <!-- Formulario de Registro -->
                 <form action="procesar_vacante.php" method="post">
