@@ -24,7 +24,12 @@ if ($result === false) {
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["nombre"] . " " . $row["apellido"] . "</td>";
             echo "<td>" . $row["correo"] . "</td>";
-            echo "<td><a href='eliminar_usuario.php?id=" . $row["id"] . "' class='btn btn-danger'>Eliminar</a></td>";
+            echo "
+                <td>
+                    <a href='eliminar_usuario.php?id=" . $row["id"] . "' class='btn btn-danger'>Eliminar</a>
+                    <a href='editar_usuario.php?id=" . $row["id"] . "' class='btn btn-primary'>Editar</a>
+                </td>";
+            
             echo "</tr>";
         }
     } else {

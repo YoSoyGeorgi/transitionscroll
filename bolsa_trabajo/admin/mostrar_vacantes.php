@@ -29,7 +29,11 @@ if ($result === false) {
             echo "<td>" . "$" . $row["sueldo"] . "</td>";
             echo "<td>" . $row["nombre_empresa"] . "</td>";
 
-            echo "<td><a href='eliminar_vacante.php?id=" . $row["id"] . "' class='btn btn-danger'>Eliminar</a></td>";
+            echo "
+            <td>
+                <a href='eliminar_vacante.php?id=" . $row["id"] . "' class='btn btn-danger'>Eliminar</a>
+                <a href='editar_vacante.php?id=" . $row["id"] . "' class='btn btn-primary'>Editar</a>
+            </td>";
             echo "</tr>";
         }
     } else {
