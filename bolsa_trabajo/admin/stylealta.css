@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #ddd;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.container {
+    margin-top: 50px;
+}
+
+.fixed-top-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}

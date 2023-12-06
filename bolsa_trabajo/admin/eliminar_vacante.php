@@ -20,6 +20,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     // Ejecutar la consulta
     if ($stmt->execute()) {
         // Redirigir a la página de mostrar vacantes
+        echo '<script>alert("La vacante se ha eliminado correctamente.");';
         header('Location: alta_vacante.php');
         exit();
     } else {

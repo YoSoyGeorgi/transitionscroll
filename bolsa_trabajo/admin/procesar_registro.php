@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Éxito al registrar el usuario
         $stmt->close();
         $conexion->close();
+        echo '<script>alert("El usuario se ha registrado correctamente.");';
         header('Location: alta_usuario.php'); // Cambia esto a la página que deseas después del registro
         exit();
     } else {

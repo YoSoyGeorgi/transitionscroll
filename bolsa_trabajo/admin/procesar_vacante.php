@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Éxito al registrar el usuario
         $stmt->close();
         $conexion->close();
+        echo '<script>alert("La vacante ha sido publicada correctamente.");</script>';
         header('Location: alta_vacante.php'); // Cambia esto a la página que deseas después del registro
         exit();
     } else {
