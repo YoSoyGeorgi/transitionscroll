@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
     }
 
     if (count($errors) == 0) {
-
+        //mensaje 1//
         $msj = "De: $nombre <a href='mailto:$email'>$email</a><br>";
         $msj .= "Asunto: informacion <br><br>";
         $msj .= "Cuerpo del mensaje";
@@ -66,7 +66,7 @@ if (isset($_POST['submit'])) {
             $mail->Port = 465;
 
             $mail->setFrom('georgijhon117@gmail.com' . 'Jorge');
-            $mail->addAddress($email, '');
+            $mail->addAddress('georgijhon117@gmail.com', '');
 
             $mail->isHTML(true);
             $mail->Subject = 'Informacion';
@@ -77,6 +77,37 @@ if (isset($_POST['submit'])) {
             $respuesta = 'Correo enviado';
         } catch (Exception $e) {
             $respuesta = 'Mensaje ' . $mail->ErrorInfo;
+        }
+
+        //mensaje 2//
+        $msj2 = "De: Enseñando a enseñar <br>";
+        $msj2 .= "Asunto: informacion <br><br>";
+        $msj2 .= '<p>' . 'Hola, en breve algún colaborador se pondrá en contacto contigo' . '<p>';
+
+        $mail2 = new PHPMailer(true);
+
+        try {
+            $mail2->SMTPDebug = SMTP::DEBUG_OFF;
+            $mail2->isSMTP();
+            $mail2->Host = 'smtp.gmail.com';
+            $mail2->Username = 'georgijhon117@gmail.com';
+            $mail2->SMTPAuth = true;
+            $mail2->Password = 'okdv sdxw oncz eirj';
+            $mail2->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail2->Port = 465;
+
+            $mail2->setFrom('georgijhon117@gmail.com' . 'Jorge');
+            $mail2->addAddress($email, '');
+
+            $mail2->isHTML(true);
+            $mail2->Subject = 'Informacion';
+            $mail2->Body = utf8_decode($msj2);
+
+            $mail2->send();
+
+            $respuesta = 'Correo enviado';
+        } catch (Exception $e) {
+            $respuesta = 'Mensaje ' . $mail2->ErrorInfo;
         }
     }
 }
