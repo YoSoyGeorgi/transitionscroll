@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 }
 
 // Consulta para obtener la lista de usuarios
-$sql = "SELECT id, nombre, apellido, correo FROM usuarios";
+$sql = "SELECT id, titulo_vacante, descripcion, fecha_publicacion, correo_contacto, sueldo, nombre_empresa FROM ofertas_laborales";
 $result = $conn->query($sql);
 
 // Verificar si la consulta fue exitosa
@@ -22,14 +22,18 @@ if ($result === false) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
-            echo "<td>" . $row["nombre"] . " " . $row["apellido"] . "</td>";
-            echo "<td>" . $row["correo"] . "</td>";
+            echo "<td>" . $row["titulo_vacante"] . "</td>";
+            echo "<td>" . $row["descripcion"] . "</td>";
+            echo "<td>" . $row["fecha_publicacion"] . "</td>";
+            echo "<td>" . $row["correo_contacto"] . "</td>";
+            echo "<td>" . "$" . $row["sueldo"] . "</td>";
+            echo "<td>" . $row["nombre_empresa"] . "</td>";
+
             echo "
-                <td>
-                    <a href='eliminar_usuario.php?id=" . $row["id"] . "' class='btn btn-danger'>Eliminar</a>
-                    <a href='editar_usuario.php?id=" . $row["id"] . "' class='btn btn-primary'>Editar</a>
-                </td>";
-            
+            <td>
+                <a href='eliminar_vacante.php?id=" . $row["id"] . "' class='btn btn-danger'>Eliminar</a>
+                <a href='editar_vacante.php?id=" . $row["id"] . "' class='btn btn-primary'>Editar</a>
+            </td>";
             echo "</tr>";
         }
     } else {

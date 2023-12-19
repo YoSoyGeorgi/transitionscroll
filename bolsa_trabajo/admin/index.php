@@ -18,6 +18,9 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
@@ -80,6 +83,7 @@
 <body>
 
     <header>
+        <img src="../img/ense.png" alt="Logo" style="width: 225px;">
         <h1>Administrador</h1>
     </header>
 

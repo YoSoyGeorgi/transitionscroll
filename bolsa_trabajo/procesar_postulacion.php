@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 unlink($rutaDestino);
 
                 // Puedes redirigir a una página de confirmación
-                header('Location: confirmacion_postulacion.php');
+                header('Location: index.php');
                 exit;
             } catch (Exception $e) {
                 echo 'Error: ' . $mail->ErrorInfo;

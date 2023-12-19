@@ -15,9 +15,12 @@
 
         header {
             background-color: #ddd;
-            color: #fff;
+            color: #000;
             padding: 20px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
@@ -60,6 +63,7 @@
 <body>
 
     <header>
+        <img src="../img/ense.png" alt="Logo" style="width: 175px;">
         <h1>Ofertas Laborales</h1>
     </header>
 
